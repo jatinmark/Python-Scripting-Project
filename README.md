@@ -1,0 +1,55 @@
+Game Directory Manager: Automated Game Compilation and Execution in Go
+Overview
+The Game Directory Manager script is a Python tool designed to automate the process of managing, compiling, and executing Go-based games stored in specific directories. This script searches for game directories, compiles the Go code files, and runs the games, while also generating metadata in the form of a JSON file. The script allows users to quickly and efficiently handle multiple games from a large directory.
+
+Features
+Game Discovery: Automatically searches for directories containing the word "game."
+Directory Organization: Moves and renames game directories into a centralized /games directory.
+Go Compilation: Compiles Go source files (.go) for each game found in the directories.
+Execution: Runs the compiled Go games and logs the results.
+Metadata Generation: Creates a metadata.json file that contains details about the games, such as the number of games and their names.
+
+Assumptions
+The data directory contains various files and subdirectories.
+Game directories are identified by the word "game" in their names.
+Each game directory contains a single .go file that must be compiled and run.
+A new games directory will be created to store the renamed games without the "game" suffix.
+
+Project Workflow
+Find all Game Directories: The script scans the /data directory for directories that contain the word "game."
+
+Create a /games Directory: A new /games directory is created to store the renamed and copied game directories.
+
+Move & Rename Game Directories: All game directories are copied into the /games directory, with the word "game" removed from their names.
+
+Generate JSON Metadata: The script generates a metadata.json file that provides information about the games, such as their names and the total number of games.
+
+Compile the Go Game Code: Each game directory contains a .go file, which is compiled using the Go compiler.
+
+Run the Compiled Games: After compilation, the script runs the games and logs the compilation result.
+
+Requirements
+To run this project, you’ll need:
+
+Python 3.x
+Go Compiler (go command available in your system's PATH)
+Basic knowledge of running Python scripts
+
+Usage
+1. Install Required Packages
+Make sure you have the necessary tools installed:
+Python 3.x
+Go Compiler
+
+2. Run the Script
+To run the script, use the following command in your terminal or command prompt:
+python3 get_game_data.py <source_directory> <target_directory>
+
+For example:
+python3 get_game_data.py data games
+This will search for all game directories in the /data directory, copy and rename them into the /games directory, compile the .go files, run them, and generate a metadata.json file in the /games directory.
+
+3. Output
+The compiled games will be stored in the /games directory.
+The metadata.json file will contain information about the processed games.
+The output of the compilation and execution will be printed to the console.
