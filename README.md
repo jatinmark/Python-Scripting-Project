@@ -18,7 +18,7 @@ The Game Directory Manager script is a Python tool designed to automate the proc
 -No experience needed—just your determination. Future-proof your career and unlock six-figure potential like many of our students have!
 
 # Usage
-#1. Install Required Packages
+# 1. Install Required Packages
 Make sure you have the necessary tools installed:
 Python 3.x
 Go Compiler
